@@ -205,6 +205,7 @@ El proyecto se versiona en Bitbucket Cloud. Cada push a la rama principal dispar
 ## Mantenimiento y escalabilidad
 
 La aplicación es completamente escalable de forma automática gracias a Cloud Run. No requiere gestión de servidores y se adapta a la carga de usuarios sin intervención manual.
+.
 
 ---
 
