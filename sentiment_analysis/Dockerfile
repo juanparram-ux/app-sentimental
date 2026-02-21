@@ -1,11 +1,12 @@
-FROM python:3.10
+FROM python:3.11-slim
 
 WORKDIR /app
 
-COPY . .
-
+COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-EXPOSE 8080
+COPY app/ .
 
-CMD ["gunicorn", "-b", "0.0.0.0:8080", "main:app"]
+ENV PORT=8080
+
+CMD ["gunicorn", "--bind", "0.0.0.0:8080", "main:app"]
